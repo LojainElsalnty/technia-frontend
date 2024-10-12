@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header {
+    background-color: #000000; 
+    padding: 20px; 
+    display: flex;
+    align-items: center; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    position: relative;
+}
+
+.nav-link {
+    padding: 10px 15px; 
+    font-weight: bold; 
+    color: white; 
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid blue; 
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-content {
+    padding: 40px; 
+    min-height: 80vh; 
+}
+
+/* Dropdown menu styles */
+.dropdown-menu {
+    background-color: white; 
+    border-radius: 4px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    padding: 8px 0; /* Padding for dropdown */
+    min-width: 150px; /* Set minimum width */
+}
+
+/* Dropdown item styles */
+.dropdown-menu .dropdown-link {
+    color: black; 
+    padding: 12px 16px; /* Increased padding for better click area */
+    display: block; 
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.dropdown-link:hover {
+    background-color: rgba(0, 0, 0, 0.1); 
+}
+
+/* Show Dropdown when State is Active */
+.relative:hover .dropdown-menu,
+.relative .dropdown-menu {
+    display: block; /* Show dropdown when hovering over parent or when active */
+}
